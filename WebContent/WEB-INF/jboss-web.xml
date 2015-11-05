@@ -1,0 +1,3 @@
+<jboss-web>
+	<context-root>/lessons</context-root>
+</jboss-web>
