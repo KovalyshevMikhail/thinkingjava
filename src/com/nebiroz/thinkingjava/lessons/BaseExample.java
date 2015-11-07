@@ -10,7 +10,7 @@ public class BaseExample implements IBaseExample{
 	public BaseExample(){ }
 	
 	
-	public void startOutResult() { textOut += "<pre>"; }
+	public void startOutResult() { textOut += "<hr/><h3>Реальный результат:</h3><pre>"; }
 	public void stopOutResult() { textOut += "</pre>"; }
 	public void printOutResult(String text) { textOut += text + " "; }
 	public void printOutResultLn(String text) { textOut += text + "\n"; }
