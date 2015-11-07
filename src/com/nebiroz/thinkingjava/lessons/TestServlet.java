@@ -9,8 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.nebiroz.thinkingjava.lessons.chapter01.*;
-import com.nebiroz.thinkingjava.lessons.chapter04.*;
+import com.nebiroz.thinkingjava.lessons.FactoryTask;
 
 /**
  * Servlet implementation class TestServlet
@@ -46,25 +45,8 @@ public class TestServlet extends HttpServlet {
 		//Number of exercise
 		int excId = (request.getParameter("exc") != null) ? Integer.parseInt(request.getParameter("exc")) : 0;
 		
-		BaseExample example = null;
-		switch (chapter){
-		case 1: 
-			switch (exId) {
-			case 1: example = new com.nebiroz.thinkingjava.lessons.chapter01.Example01(); break;
-			}
-			break;
-		case 4:
-			switch (exId) {
-			case 1: example = new com.nebiroz.thinkingjava.lessons.chapter04.Example01(); break;
-			}
-			break;
-		case 5:
-			switch (excId) {
-			case 1: example = new com.nebiroz.thinkingjava.lessons.chapter05.Exercise01(); break;
-			case 2: example = new com.nebiroz.thinkingjava.lessons.chapter05.Exercise02(); break;
-			}
-			break;
-		}
+		FactoryTask taskManager = new FactoryTask(chapter, exId, excId);
+		BaseExample example = taskManager.getTask();
 		
 		if (example != null){
 			BODY = example.runExample();
