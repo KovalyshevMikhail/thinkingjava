@@ -18,7 +18,7 @@ public class BaseExample implements IBaseExample{
 	
 	
 	public void printOut(String text)	{ textOut += " " + text; }
-	public void printOutLn(String text)	{ printOut("<p>" + text + "</p>"); }
+	public void printOutLn(String text)	{ printOut("" + text + "<br/>"); }
 	
 	public void printExampleText() {
 		printHeader(header);

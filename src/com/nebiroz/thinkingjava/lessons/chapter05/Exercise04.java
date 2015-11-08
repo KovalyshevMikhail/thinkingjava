@@ -9,6 +9,14 @@ import com.nebiroz.thinkingjava.lessons.BaseExample;
 public class Exercise04 extends BaseExample{
     static int result = 0;
 
+    /**
+     * Описательная части примера.
+     * Здесь нужно заполнить поля для вывода описания примера.
+     * header - заголовок программы. Здесь указывается просто номер и тип задачи
+     * description - описание задачи, которую нужно выполнить
+     * codeExample - полученный в хоже решения исходный код
+     */
+
     public Exercise04(){
         header = "Exercise 04";
         description = "Добавьте к классу из упражнения 3 перегруженный конструктор, принимающий в качестве параметра строка (String)<br/>"
@@ -33,6 +41,11 @@ public class Exercise04 extends BaseExample{
         printExampleText();
     }
 
+    /**
+     * Исходный код для примера.
+     * Нужно написать примерочный код класса.
+     */
+
     class Test{
         public Test(){
             printOutLn("This is constructor of Test class!");
@@ -42,6 +55,12 @@ public class Exercise04 extends BaseExample{
             printOutLn("This is constructor of Test class!");
         }
     }
+
+    /**
+     * Исходный код вызывающего блока.
+     * Здесь нужно написать всю цепочку вызовов.
+     * @return String результат выполнинения исходного кода для примера
+     */
 
     @Override
     public String runExample() {

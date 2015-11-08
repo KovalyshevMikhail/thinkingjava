@@ -4,7 +4,15 @@ import com.nebiroz.thinkingjava.lessons.*;
 
 public class Example01 extends BaseExample{
 	static int result = 0;
-	
+
+	/**
+	 * Описательная части примера.
+	 * Здесь нужно заполнить поля для вывода описания примера.
+	 * header - заголовок программы. Здесь указывается просто номер и тип задачи
+	 * description - описание задачи, которую нужно выполнить
+	 * codeExample - полученный в хоже решения исходный код
+	 */
+
 	public Example01(){
 		header = "Example 01";
 		description = "Конструкция if-else";
@@ -21,7 +29,12 @@ public class Example01 extends BaseExample{
 				+ "3 ==> test(5, 5);\n";
 		printExampleText();
 	}
-	
+
+	/**
+	 * Исходный код для примера.
+	 * Нужно написать примерочный код класса.
+	 */
+
 	static void test(int testval, int target){
 		if (testval > target)
 			result = 1;
@@ -30,6 +43,12 @@ public class Example01 extends BaseExample{
 		else
 			result = 0;
 	}
+
+	/**
+	 * Исходный код вызывающего блока.
+	 * Здесь нужно написать всю цепочку вызовов.
+	 * @return String результат выполнинения исходного кода для примера
+	 */
 
 	@Override
 	public String runExample() {
