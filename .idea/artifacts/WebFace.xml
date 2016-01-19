@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WebFace">
+    <output-path>$PROJECT_DIR$/out/artifacts/WebFace</output-path>
+    <root id="archive" name="WebFace.war">
+      <element id="javaee-facet-resources" facet="ThinkingJava/web/Web" />
+    </root>
+  </artifact>
+</component>

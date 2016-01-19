@@ -77,7 +77,7 @@ public class MainServlet extends HttpServlet {
 				example = taskManager.getTask();
 
 				if (example != null){
-					BODY += "<li><a href=\"/lessons/chapters?chapter=" + chapter + "&exc=" + excId + "\">Упражнение " + excId + "</a></li>\n";
+					BODY += "<li><a href=\"/lessons/chapters?chapter=" + chapter + "&exc=" + excId + "\">Упражнение " + excId + "</a><br/>" + example.description + "</li>\n";
 				}
 				else{
 					break;
