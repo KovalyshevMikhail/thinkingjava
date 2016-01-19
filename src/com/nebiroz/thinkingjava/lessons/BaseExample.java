@@ -25,7 +25,7 @@ public class BaseExample implements IBaseExample{
 		printDescription(description);
 		printCodeOfExample(codeExample);
 	}
-	public void printHeader(String header) { textOut += "<h2>" + header + "</h2><hr/>"; };
+	public void printHeader(String header) { textOut += "<small style=\"float: left; padding-top: 0.7em;\"><a href=\"\\lessons\">к списку</a></small><h2 style=\"float: left;\">" + header + "</h2><hr style=\"clear: both;\"/>"; }
 	public void printDescription(String description) { textOut += "<h3>" + description + "</h3>";}
 	public void printCodeOfExample(String code) { textOut += "<pre>" + code + "</pre>"; }
 	
