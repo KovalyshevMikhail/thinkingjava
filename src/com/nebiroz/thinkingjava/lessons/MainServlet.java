@@ -69,15 +69,17 @@ public class MainServlet extends HttpServlet {
 		BaseExample example;
 		BODY = "<p>Главы изученной книги:</p>";
 		BODY += "<ol>";
+		FactoryTask taskManager = new FactoryTask();
 		for (int chapter = 1; chapter < 23; chapter++){
 		BODY += "<li> глава - " + CHAPTERSNAMES[chapter - 1] + "</li>";
 			BODY += "<ul>\n";
-			for (int excId = 1; excId < 10; excId++){
-				FactoryTask taskManager = new FactoryTask(chapter, exId, excId);
-				example = taskManager.getTask();
+			int excId = 1;
+			while (true){
+				example = taskManager.getTask(chapter, exId, excId);
 
 				if (example != null){
 					BODY += "<li><a href=\"/lessons/chapters?chapter=" + chapter + "&exc=" + excId + "\">Упражнение " + excId + "</a><br/>" + example.description + "</li>\n";
+					excId++;
 				}
 				else{
 					break;
