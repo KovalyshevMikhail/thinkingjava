@@ -6,7 +6,21 @@ package com.nebiroz.thinkingjava.lessons.chapter05;
 
 import com.nebiroz.thinkingjava.lessons.BaseExample;
 
-public class Exercise11 extends BaseExample{
+class ExampleThread implements Runnable{
+    private int counter = 0;
+
+    public void run(){
+        try{
+            Thread.sleep(10000);
+            counter++;
+        }
+        catch(InterruptedException ex){
+            System.out.println("Словил Exception.");
+        }
+    }
+}
+
+public class Exercise12 extends BaseExample{
     static int result = 0;
 
     /**
@@ -16,9 +30,11 @@ public class Exercise11 extends BaseExample{
      * description - описание задачи, которую нужно выполнить
      * codeExample - полученный в хоже решения исходный код
      */
-    public Exercise11(){
-        header = "Exercise 11";
-        description = "Измените предыдущее упражнение так, чтобы метод finalize() обязательно был исполнен.<br/>";
+    public Exercise12(){
+        header = "Exercise 12";
+        description = "Включите в класс с именем Tank (емкость), который можно наполнить и опустошить.<br/>"
+                + "Условие \"готовности\" требует, чтобы он был пуст перед очисткой. Напишите метод finalize(), проверяющий это условие.<br/>"
+                + "В методе main() протестируйте возможные случаи использования вашего класса.<br/>";
         codeExample = " class TestClass{\n"
                 + "     public void finalize(){\n"
                 + "         System.out.println(\"Сработал метод finalize()\");\n"
@@ -41,10 +57,23 @@ public class Exercise11 extends BaseExample{
      * Исходный код для примера.
      * Нужно написать примерочный код класса.
      */
-    class TestClass{
+    class Tank{
+        private boolean isReady = false;
+        public Tank() { }
+        public Tank(boolean ready){
+            isReady = ready;
+        }
+
+        public void rightClean(){
+            isReady = false;
+        }
         public void finalize(){
-            printOutLn("Сработал метод finalize()");
-            System.out.println("Сработал метод finalize()");
+            if (isReady){
+                System.out.println("Ошибка! Готовность должна быть false" + this.toString());
+            }
+            else{
+                System.out.println("Удаление прошло успешно!" + this.toString());
+            }
         }
     }
 
@@ -60,10 +89,17 @@ public class Exercise11 extends BaseExample{
         /**
          * Здесь нужно написать цепочки вызовов функций
          */
-        TestClass tst = new TestClass();
-        tst = null;
+        System.out.println("Создаем правильный танк");
+        Tank tnk = new Tank(true);
+        tnk.rightClean();
+
+        System.out.println("Теряем ссылку");
+        new Tank(true);
+
+        System.out.println("Очищаем ресурсы");
         System.gc();
-        printOutLn("Надпись, что сработал метод, появилась. Значит ресурс не очищается под действием JVM.");
+
+        System.out.println("Смотрим результат");
 
         stopOutResult();
         return endExeceuteExample();
