@@ -6,20 +6,6 @@ package com.nebiroz.thinkingjava.lessons.chapter05;
 
 import com.nebiroz.thinkingjava.lessons.BaseExample;
 
-class ExampleThread implements Runnable{
-    private int counter = 0;
-
-    public void run(){
-        try{
-            Thread.sleep(10000);
-            counter++;
-        }
-        catch(InterruptedException ex){
-            System.out.println("Словил Exception.");
-        }
-    }
-}
-
 public class Exercise12 extends BaseExample{
     static int result = 0;
 
