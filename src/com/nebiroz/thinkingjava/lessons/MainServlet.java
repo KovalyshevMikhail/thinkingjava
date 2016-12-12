@@ -17,11 +17,11 @@ public class MainServlet extends HttpServlet {
 	private static final String CONTENT_TYPE = "text/html;charset=UTF-8";
 	private static final String MESSAGE = "<!DOCTYPE html><html>"
 			+ "<head><title>Список упражнений</title></head>";
-    public static String BODY = "";
+    private static String BODY = "";
     private static final String BEGINBODY = "<body>";
     private static final String ENDBODY = "</body></html>";
 
-	public static final String[] CHAPTERSNAMES = {
+	private static final String[] CHAPTERSNAMES = {
 			"Введение в объекты",
 			"Все является объектом",
 			"Операторы",
@@ -70,7 +70,7 @@ public class MainServlet extends HttpServlet {
 		BODY = "<p>Главы изученной книги:</p>";
 		BODY += "<ol>";
 		FactoryTask taskManager = new FactoryTask();
-		for (int chapter = 1; chapter < 23; chapter++){
+		for (int chapter = 1; chapter < CHAPTERSNAMES.length; chapter++){
 		BODY += "<li> глава - " + CHAPTERSNAMES[chapter - 1] + "</li>";
 			BODY += "<ul>\n";
 			int excId = 1;
@@ -79,7 +79,12 @@ public class MainServlet extends HttpServlet {
 
 				if (example != null){
 					BODY += "<li><a href=\"/lessons/chapters?chapter=" + chapter + "&exc=" + excId + "\">Упражнение " + excId + "</a><br/>" + example.description + "</li>\n";
-					excId++;
+					if (excId != -1) {
+						excId++;
+					}
+					else {
+						exId++;
+					}
 				}
 				else{
 					break;

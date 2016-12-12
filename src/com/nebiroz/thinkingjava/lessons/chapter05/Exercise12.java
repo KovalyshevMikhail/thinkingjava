@@ -48,6 +48,7 @@ public class Exercise12 extends BaseExample{
         public Tank() { }
         public Tank(boolean ready){
             isReady = ready;
+            printOutLn("Создан танк - " + this.toString());
         }
 
         public void rightClean(){
@@ -55,9 +56,11 @@ public class Exercise12 extends BaseExample{
         }
         public void finalize(){
             if (isReady){
+                printOutLn("Ошибка! Готовность должна быть false" + this.toString());
                 System.out.println("Ошибка! Готовность должна быть false" + this.toString());
             }
             else{
+                printOutLn("Удаление прошло успешно!" + this.toString());
                 System.out.println("Удаление прошло успешно!" + this.toString());
             }
         }
@@ -75,17 +78,21 @@ public class Exercise12 extends BaseExample{
         /**
          * Здесь нужно написать цепочки вызовов функций
          */
-        System.out.println("Создаем правильный танк");
+        printOutLn("Создаем правильный танк");
         Tank tnk = new Tank(true);
         tnk.rightClean();
 
-        System.out.println("Теряем ссылку");
+        printOutLn("Теряем ссылку");
         new Tank(true);
 
-        System.out.println("Очищаем ресурсы");
+        printOutLn("Очищаем ресурсы");
         System.gc();
 
-        System.out.println("Смотрим результат");
+        printOutLn("Смотрим результат");
+
+        printOutLn("В связи с тем, что очистка от мусора срабатывает (почему-то) после закрытия приложения, то вывод в стандартный поток должен быть следующий:");
+        printOutLn("[stdout] (Finalizer) Ошибка! Готовность должна быть falsecom.nebiroz.thinkingjava.lessons.chapter05.Exercise12$Tank@20d35a66");
+        printOutLn("[stdout] (Finalizer) Удаление прошло успешно!com.nebiroz.thinkingjava.lessons.chapter05.Exercise12$Tank@37e6770b");
 
         stopOutResult();
         return endExeceuteExample();
