@@ -17,7 +17,7 @@ public class Exercise09 extends BaseExample{
      * codeExample - полученный в хоже решения исходный код
      */
     public Exercise09(){
-        header = "Exercise 09";
+        header = "Упражнение 09";
         description = "Подготовьте класс с двумя (перегруженными) конструкторами.<br/>"
                 + "Используя ключевое слово this, вызовите второй конструктор из первого.<br/>";
         codeExample = " class TestClass{\n"

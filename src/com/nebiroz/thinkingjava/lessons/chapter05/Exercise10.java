@@ -17,7 +17,7 @@ public class Exercise10 extends BaseExample{
      * codeExample - полученный в хоже решения исходный код
      */
     public Exercise10(){
-        header = "Exercise 10";
+        header = "Упражнение 10";
         description = "Создайте класс с методом finalize(), который выводит сообщение.<br/>"
                 + "В методе main() создайте объект вашего класса. Объясните поведение программы.<br/>";
         codeExample = " class TestClass{\n"

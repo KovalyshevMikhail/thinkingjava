@@ -17,7 +17,7 @@ public class Exercise11 extends BaseExample{
      * codeExample - полученный в хоже решения исходный код
      */
     public Exercise11(){
-        header = "Exercise 11";
+        header = "Упражнение 11";
         description = "Измените предыдущее упражнение так, чтобы метод finalize() обязательно был исполнен.<br/>";
         codeExample = " class TestClass{\n"
                 + "     public void finalize(){\n"

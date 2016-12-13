@@ -18,7 +18,7 @@ public class Exercise03 extends BaseExample{
      */
 
     public Exercise03(){
-        header = "Exercise 03";
+        header = "Упражнение 03";
         description = "Создать класс с конструктором по-умолчанию (без параметров), который выводит на экран сообщение.<br/>"
                 + "Создать объект этого класса";
         codeExample = "class Test {\n"

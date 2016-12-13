@@ -14,7 +14,7 @@ public class Exercise01 extends BaseExample {
 	 */
 
 	public Exercise01(){
-		header = "Exercise 01";
+		header = "Упражнение 01";
 		description = "Создать класс с неинициализированной ссылкой на String.<br/>"
 				+ "Показать, что Java инициализирует ссылку значением Null";
 		codeExample = "class NotAllocatedString{\n"

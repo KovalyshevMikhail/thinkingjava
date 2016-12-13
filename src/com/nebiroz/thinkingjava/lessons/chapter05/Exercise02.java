@@ -14,7 +14,7 @@ public class Exercise02 extends BaseExample{
 	 */
 
 	public Exercise02(){
-		header = "Exercise 02";
+		header = "Упражнение 02";
 		description = "Создать класс с полем String, инициализируемым в точке определения, и другим полем, инициализируемым в конструкторе.<br/>"
 				+ "Чем отличаются эти два подхода?";
 		codeExample = "class Test {\n"

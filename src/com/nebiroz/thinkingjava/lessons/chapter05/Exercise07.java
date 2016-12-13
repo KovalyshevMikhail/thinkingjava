@@ -17,7 +17,7 @@ public class Exercise07 extends BaseExample{
      * codeExample - полученный в хоже решения исходный код
      */
     public Exercise07(){
-        header = "Exercise 07";
+        header = "Упражнение 07";
         description = "Создайте класс без конструктора. Создайте объект этого класса в методе main(),<br/>"
                 + "чтобы удостовериться, что конструктор по умолчанию синтезируется автоматически.<br/>";
         codeExample = " class TestClass{ }\n"

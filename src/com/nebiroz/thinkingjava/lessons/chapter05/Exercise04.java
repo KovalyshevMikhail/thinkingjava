@@ -18,7 +18,7 @@ public class Exercise04 extends BaseExample{
      */
 
     public Exercise04(){
-        header = "Exercise 04";
+        header = "Упражнение 04";
         description = "Добавьте к классу из упражнения 3 перегруженный конструктор, принимающий в качестве параметра строка (String)<br/>"
                 + "и распечатывающий ее вместе с сообщением.";
         codeExample = "class Test {\n"
