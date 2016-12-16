@@ -49,9 +49,9 @@ public class Exercise03 extends BaseExample{
 				"...\n" +
 				"Character person = new Character();\n" +
 				"PositionCharacter persLoc = person.getLocation();\n" +
-				"printOutLn(\"x = \" + persLoc.x + \"; y = \" + persLoc.y + \"; z = \" + persLoc.z + \";\");\n" +
+				"print(\"x = \" + persLoc.x + \"; y = \" + persLoc.y + \"; z = \" + persLoc.z + \";\");\n" +
 				"setLocationToBegin(persLoc);\n" +
-				"printOutLn(\"x = \" + persLoc.x + \"; y = \" + persLoc.y + \"; z = \" + persLoc.z + \";\");\n" +
+				"print(\"x = \" + persLoc.x + \"; y = \" + persLoc.y + \"; z = \" + persLoc.z + \";\");\n" +
 				"person.changeLocation(persLoc);\n" +
 				"\n\n\n" +
 				"В итоге должны вывестись надписи:\n" +

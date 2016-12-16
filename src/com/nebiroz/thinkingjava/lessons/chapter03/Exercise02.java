@@ -24,27 +24,27 @@ public class Exercise02 extends BaseExample{
 				"\tfloat floatNumber;\n" +
 				"}\n\n" +
 				"...\n\n" +
-				"printOutLn(\"1) Создадим 2 экземпляра.\");\n" +
+				"print(\"1) Создадим 2 экземпляра.\");\n" +
 				"TestNamesCombination a = new TestNamesCombination();\n" +
 				"TestNamesCombination b = new TestNamesCombination();\n" +
 				"\n" +
 				"a.floatNumber = 4;\n" +
 				"b.floatNumber = 7;\n" +
-				"printOutLn(\"a.floatNumber = \" + a.floatNumber + \"; b.floatNumber = \" + b.floatNumber + \";\\n\");\n" +
+				"print(\"a.floatNumber = \" + a.floatNumber + \"; b.floatNumber = \" + b.floatNumber + \";\\n\");\n" +
 				"\n" +
-				"printOutLn(\"2) Выполним a = b и зададим b.floatNumber = 9\");\n" +
+				"print(\"2) Выполним a = b и зададим b.floatNumber = 9\");\n" +
 				"a = b;\n" +
 				"b.floatNumber = 9;\n" +
-				"printOutLn(\"a.floatNumber = \" + a.floatNumber + \"; b.floatNumber = \" + b.floatNumber + \";\\n\");\n" +
+				"print(\"a.floatNumber = \" + a.floatNumber + \"; b.floatNumber = \" + b.floatNumber + \";\\n\");\n" +
 				"\n" +
-				"printOutLn(\"3) Зададим a.floatNumber = 8\");\n" +
+				"print(\"3) Зададим a.floatNumber = 8\");\n" +
 				"a.floatNumber = 8;\n" +
-				"printOutLn(\"a.floatNumber = \" + a.floatNumber + \"; b.floatNumber = \" + b.floatNumber + \";\\n\");\n" +
+				"print(\"a.floatNumber = \" + a.floatNumber + \"; b.floatNumber = \" + b.floatNumber + \";\\n\");\n" +
 				"\n" +
-				"printOutLn(\"4) Пересоздадим a и зададим a.floatNumber = 3\");\n" +
+				"print(\"4) Пересоздадим a и зададим a.floatNumber = 3\");\n" +
 				"a = new TestNamesCombination();\n" +
 				"a.floatNumber = 3;\n" +
-				"printOutLn(\"a.floatNumber = \" + a.floatNumber + \"; b.floatNumber = \" + b.floatNumber + \";\\n\");\n" +
+				"print(\"a.floatNumber = \" + a.floatNumber + \"; b.floatNumber = \" + b.floatNumber + \";\\n\");\n" +
 				"\n\n\n" +
 				"В итоге должны вывестись надписи:\n" +
 				"1) Создадим 2 экземпляра.\n" +
